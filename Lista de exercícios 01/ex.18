@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner teclado = new Scanner(System.in);
+	    
+	    float conta;
+	    
+	    
+		System.out.print("Informe o valor da conta: R$ ");
+		conta = teclado.nextFloat();
+		System.out.print("\n");
+		
+		System.out.println("Carlos pagará: " + (int)(conta / 3));
+		System.out.println("Andre pagará: " + (int)(conta / 3));
+		
+		float valorFelipe = conta - (int)(conta / 3) * 2;
+		
+		System.out.print("Felipe pagará: ");
+		    System.out.printf("%.2f", valorFelipe);
+		
+		
+	}
+}
+
+
