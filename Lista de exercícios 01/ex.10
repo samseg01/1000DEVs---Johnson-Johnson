@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		int anoInicial, anoFinal;
+		
+		    System.out.print("Digite o ano inicial: ");
+		    anoInicial = teclado.nextInt();
+		    
+		    System.out.print("Digite o ano final: ");
+		    anoFinal = teclado.nextInt();
+		    System.out.print("\n");
+		    
+		        System.out.println("A idade da pessoa em:");
+		        System.out.print("anos é: " + (anoFinal - anoInicial));
+		            System.out.print("\n");
+		            
+		        System.out.print("meses é: " + ((anoFinal - anoInicial) * 12) );
+		            System.out.print("\n");
+		            
+		        System.out.print("dias é: " + ((anoFinal - anoInicial) * 360 ));
+		            System.out.print("\n");
+		            
+		        System.out.print("semanas é: " + ((anoFinal - anoInicial) * 120 ));
+		             System.out.print("\n");
+		
+	}
+}
+
+
