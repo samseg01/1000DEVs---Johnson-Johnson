@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		float qp, qb, ref;
+	   
+		
+		System.out.print("Qual a quantidade de pães vendido no dia? ");
+		qp = teclado.nextFloat();
+		
+		System.out.print("Qual a quantidade de broas vendido? ");
+		qb = teclado.nextFloat();
+		
+		System.out.print("Qual o valor da reforma? ");
+		ref = teclado.nextFloat();
+		System.out.print("\n");
+		
+		float fatpão;
+		float fatbroa;
+		
+		fatpão = (qp * 12 / 10);
+		fatbroa = (qb * 16 / 10);
+		
+		System.out.println("Faturamento com a venda de pães: R$:" + fatpão);
+		System.out.println("Faturamento com a venda de broas: R$:" + fatbroa);
+		
+		float faturamentodiario;
+		faturamentodiario = (fatbroa + fatpão);
+		System.out.println("Faturamento diário (pães + broas): R$:" + faturamentodiario);
+		
+		float poupança;
+		poupança = (faturamentodiario / 10);
+		System.out.println("O valor do repositorio para poupança é: R$:" + poupança);
+		System.out.print("\n");
+		
+		int dias;
+		dias = ((int)ref / (int)faturamentodiario);
+		System.out.print("Se continuar nessa média de faturamento faltará " + dias + " dias para você conseguir o valor da reforma.");
+		
+		
+		
+		
+		
+		
+		
+	}
+}
+
+
+
