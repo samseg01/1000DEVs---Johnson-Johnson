@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		int valor1, valor2;
+		
+		
+		System.out.print("Informe o valor 1: ");
+		valor1 = teclado.nextInt();
+		
+		System.out.print("Informe o valor 2: ");
+		valor2 = teclado.nextInt();
+		
+		System.out.print("A divisão de " + valor1 + " por " + valor2 + " é: " + ((float)valor1 / valor2));
+		
+		
+	}
+}
+
