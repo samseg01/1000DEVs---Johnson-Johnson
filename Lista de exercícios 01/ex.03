@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	
+	    Scanner teclado = new Scanner(System.in);
+	
+	    float av1, av2, avt;
+	    int p1, p2;
+	    
+	    float media;
+	    
+	    p2 = 2;
+	    p1 = 1;
+	    
+	    System.out.print("Digite a nota da AV1: ");
+	    av1 = teclado.nextFloat();
+	    
+	    System.out.print("Digite a nota da AV2: ");
+	    av2 = teclado.nextFloat();
+	    
+	    System.out.print("Digite a nota de Trabalho (AVT): ");
+	    avt = teclado.nextFloat();
+	    
+	    media = (av1 * p2 + av2 * p2 + avt * p1) / 5;  
+	    System.out.print("\n");
+	    System.out.print("Sua média nessa matéria é : ");
+	    System.out.printf("%.2f", media);
+	    
+	    
+	}
+}
+
