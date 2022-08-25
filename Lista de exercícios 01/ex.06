@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int qntcavalos;
+	    float valorferradura;
+	    
+	    Scanner teclado = new Scanner(System.in);
+	    
+		System.out.print("Informe a qunatidade de cavalos: ");
+		qntcavalos = teclado.nextInt();
+		
+		System.out.print("Informa o valor de cada ferradura: ");
+		valorferradura = teclado.nextFloat();
+		System.out.print("\n");
+		
+		System.out.print("A quantidade de ferraduras nesessarias: " + (qntcavalos * 4));
+	    System.out.print("\n");
+	    System.out.print("Valor total para a compra das ferraduras: R$: " + (qntcavalos * 4 * valorferradura));
+		
+	}
+}
+
