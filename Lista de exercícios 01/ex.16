@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		float fatAnt;
+		
+    		System.out.print("Digite o valor do mês anterior: ");
+    		fatAnt = teclado.nextFloat();
+    		System.out.print("\n");
+    		
+    		float fatProx = (fatAnt * (float)1.20); 
+    	    
+    	    System.out.println("A meta dp proximo mês será: " + fatProx );
+    	    
+    	    System.out.print("Com o aumento de: R$ ");
+    	    System.out.printf("%.2f", (fatAnt * 0.20));
+    	    System.out.print("\n");
+    	    
+    	    System.out.println("Quantidade de peças a serem vendidas para atingirmos a meta: ");
+    	    System.out.print("\n");
+    	     
+    	     System.out.print("Produto 1: ");   
+    	     System.out.printf("%.2f", ((fatAnt * 0.20) / 150.00) );
+    	     System.out.print(" peças\n");
+    	     
+    	     System.out.print("Produto 2: ");  
+    	     System.out.printf("%.2f", ((fatAnt * 0.20) / 220.00));
+    	     System.out.print(" peças\n");
+    	     
+    	     System.out.print("Produto 3: ");  
+    	     System.out.printf("%.2f", ((fatAnt * 0.20) / 97.00));
+    	     System.out.print(" peças\n");
+    	    
+	}
+}
+
