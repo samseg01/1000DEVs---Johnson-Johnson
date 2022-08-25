@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		float numero;
+		
+		System.out.print("Digite um numero de 4 digitos: ");
+		numero = teclado.nextFloat();
+		System.out.print("\n");
+		
+            float divMil = (numero / 1000f);
+            float divCent = (numero / 100f) % 10;
+            float divDez = (numero / 10f) % 10;
+		    float diviUnin = (numero % 10 );
+		    
+		System.out.print("Milhares: " + (int) divMil);
+		System.out.print("\n");
+		
+		System.out.print("Centenas: " + (int) divCent);
+		System.out.print("\n");
+		
+		System.out.print("Dezenas: " +(int) divDez);
+		System.out.print("\n");
+		
+		System.out.print("Unidades: " +(int) diviUnin);
+		System.out.print("\n");
+		    
+	}
+}
+
+
