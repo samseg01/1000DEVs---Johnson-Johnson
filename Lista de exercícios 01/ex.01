@@ -3,24 +3,41 @@ public class Main
 {
 	public static void main(String[] args) {
 	
-	Scanner teclado = new Scanner(System.in);
+		System.out.println("Olá, Vamos fazer sua consultoria de terreno");
+		System.out.println("\n");
+		System.out.println("Primeiramente, é para sua ciencia que o valor do metro quadrado é de R$50,00");
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		float frente;
+		float lado;
+		float valor;
 	
-	int saMi;
-	int saFu;
-	int salaFi;
+		
+		System.out.print("Qual a metragem da frente do terreno? ");
+		frente = teclado.nextFloat();
 	
-	
-	System.out.print("Informe o valor do sálario mínimo: ");
-	sami = teclado.nextInt();
-	
-	System.out.print("Qual o salário nominal do funcionario: ");
-	safu = teclado.nextInt();
-	System.out.print("\n");
-	
-	salafi = (safu / sami);
-	System.out.print("O funcionario recebe " + salafi + " salarios minimos");
-	
-	
+		System.out.println("Certo");
+		System.out.println("\n");
+		
+		System.out.print("Agora informe a metragem do lado do terreno: ");
+		lado = teclado.nextFloat();
+		System.out.println("\n");
+		
+			
+			float metroqua;
+			float metri;
+			float metro = 50;
+			
+			
+			metroqua = (frente * lado); 
+			System.out.println("Seu terreno tem " + metroqua + " metros quadrados");
+		
+			valor = (metroqua * metro );
+			System.out.print("E o valor do seu terreno é R$" + valor + " reais");
+			
+		
+		
 	}
 }
 
