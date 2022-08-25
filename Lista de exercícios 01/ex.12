@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int quntFrango;
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.print("Digite a quantidade de frangos: ");
+		quntFrango = teclado.nextInt();
+		System.out.print("\n");
+		
+		float precoAneis = (float)((2 * 3.50 + 4) * quntFrango);
+		
+		System.out.print("o valor total para indentificar os frangos é: R$ " + precoAneis);
+		
+		
+	}
+}
+
