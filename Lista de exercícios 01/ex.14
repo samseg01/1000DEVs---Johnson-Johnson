@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	Scanner teclado = new Scanner(System.in);
+	
+	    int quantSand;	
+	    
+	    System.out.print("Digite a qunatidade de sanduiches: ");
+	    quantSand = teclado.nextInt();
+	    
+	    System.out.println("Para produzir " + quantSand + " samduiches serão necessarios:");
+	        
+	        System.out.printf("%.2f", (quantSand * 0.100));
+	        System.out.print(" KGs de mussarela");
+	        System.out.print("\n");
+	        
+	        System.out.printf("%.2f", (quantSand * 0.50));
+	        System.out.print(" KGs de apressunto");
+	        System.out.print("\n");
+	        
+	        System.out.printf("%.2f", (quantSand * 0.120));
+	        System.out.print(" KGs de hamburger");
+	        System.out.print("\n");
+	        
+	        
+	
+	
+	
+	}
+}	
+	
+	
