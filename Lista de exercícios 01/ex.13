@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+	Scanner teclado = new Scanner(System.in);
+	
+	int qunt350, qunt600, qunt2l;
+	
+	    System.out.print("Digite a quantidade de latas de 350ml: ");
+	    qunt350 = teclado.nextInt();
+	    
+	    System.out.print("Digite a quantidade de garrafas de 600ml: ");
+	    qunt600 = teclado.nextInt();
+	    
+	    System.out.print("Digite a quantidade de garrfas de 2L: ");
+	    qunt2l = teclado.nextInt();
+        System.out.print("\n");
+	    
+	       float quntTotal = (float)((qunt350 * 0.350) + (qunt600 * 0.600) + (qunt2l * 2.0));
+	       System.out.print("A quantidade total de litros comprados é: " + quntTotal);
+	    
+	    
+	    
+	    
+
+		
+		
+	}
+}	
