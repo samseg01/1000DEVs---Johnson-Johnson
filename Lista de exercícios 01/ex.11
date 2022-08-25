@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner teclado = new Scanner(System.in);
+	    
+	    float QntSuco;
+	    
+		System.out.print("Qual a quantidade de suco que você precisa? ");
+		QntSuco = teclado.nextFloat();
+		System.out.print("\n");
+		
+		System.out.print("Para fazer " + QntSuco + " litros de suco de maracuja, é necessario: ");
+	    	System.out.print("\n");
+	    	
+	    	System.out.print(((QntSuco / 10) * 8) + " litros de água");
+	    	System.out.print("\n");
+	    	
+	    	System.out.print(((QntSuco / 10) * 2) + " litros de suco concentrado");
+		    System.out.print("\n");
+		
+		
+	}
+}
+
