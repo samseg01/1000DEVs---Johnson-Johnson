@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner teclado = new Scanner(System.in);
+	   
+	    float salario;
+	    
+		System.out.print("Informe o salário: ");
+		    salario = teclado.nextFloat();
+		        System.out.print("\n");
+		
+		System.out.println("Salario Inicial: " + salario );
+		
+	    float salarioReajustado = salario * (float)1.15;
+	        System.out.println("Salario Reajustado: " + salarioReajustado);
+	    
+	    float totalDescontos = ((salario * (float)0.11) + (salario * (float)0.08));
+	    
+	    System.out.println("Desconto 11% INSS: " + (salario * 0.11));
+	    System.out.println("Desconto 8% FGTS: " + (salario * 0.08));
+	    
+	    
+	    System.out.println("Total de descontos INSS + FGTS: " + totalDescontos);
+	    
+	    
+	    System.out.println("Salario Final: " + (salarioReajustado - ((salario * 0.11) + (salario * 0.08))));
+	}
+}
+
+
