@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+	Scanner teclado = new Scanner(System.in);
+	
+	int horasNormais, horasExtras;
+	int dempendentes;
+	
+	    System.out.print("Digite a quantidade total de horas normais: ");
+	    horasNormais = teclado.nextInt();
+	    
+	    System.out.print("Digite a quantidade total de horas extras: ");
+	    horasExtras = teclado.nextInt();
+	    
+	    System.out.print("Digite a quantidade de dempendentes menores de 6 anos: ");
+	    dempendentes = teclado.nextInt();
+	    System.out.print("\n");
+	    
+	        int salario = (horasNormais * 10);
+	        System.out.print("Horas normais: R$ " + salario);
+	            System.out.print("\n");
+	         
+	        System.out.print("Adicional de horas extras: R$ " + (horasExtras * 15));
+	             System.out.print("\n");
+	             
+	        System.out.print("Adicional de Dempendentes: R$ " + (dempendentes * 90));
+	             System.out.print("\n");
+	             
+	        System.out.print("Salário Líquido (Hrs normais - Descontos): R$ " + (salario - (salario * 0.11)));
+	             System.out.print("\n");
+	        
+	        System.out.print("Salario Final: R$ " + ((salario - (salario * 0.11)) + (horasExtras * 15) + (dempendentes * 90) ));
+	
+	}
+}
+
