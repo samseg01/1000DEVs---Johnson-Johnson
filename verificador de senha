@@ -1,0 +1,129 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+	
+		String senha;
+		
+		System.out.println("A senha deve conter: \n\n- Letra Maiuscula \n- Letra Minuscula \n- Numeral \n- No mínimo 7 caracteres \n");
+		
+		
+		do{
+		System.out.print("\n");
+		System.out.print("Digite a senha: ");
+		senha = teclado.nextLine();
+		System.out.print("\n");
+	
+		//caracterEspecial(senha);
+		if(senha.length() < 7){
+		    System.out.println("- Necessário 7 caracteres mínimos");
+		}
+		
+		
+		  if(letrasMaiusculas(senha)==false){
+		    System.out.println("- Necessário ao menos uma letra Maiuscula");
+		} if(letrasMinusculas(senha)==false){
+		    System.out.println("- Necessário ao menos uma letra Minuscula");
+		} if(numeros(senha)==false){
+		    System.out.println("- Necessário ao menos um numeral");
+		} /*if(caracterEspecial(senha)==false){
+		    System.out.println("Necessário ao menos um caracter especial");
+		} */
+		
+		}while(letrasMaiusculas(senha)==false || letrasMinusculas(senha)==false || numeros(senha)==false && senha.length()<7 /*&& caracterEspecial ==true*/);
+		    System.out.print("------ SENHA CADASTRADA COM SUCESSO ------");
+		    
+		    
+}
+	public static boolean letrasMaiusculas(String senha){
+	    String letrasM = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	    int quantidadeLetrasM=0;
+	    
+	    for(int s=0; s < senha.length(); s++){
+                senha.charAt(s);
+                
+	        for(int l=0; l < letrasM.length(); l++){
+    	        
+    	        if (senha.charAt(s) == letrasM.charAt(l))
+    	            quantidadeLetrasM++;
+	        }
+	    
+	}
+	        if(quantidadeLetrasM>0){
+	            return true;
+	        } else {
+	            return false;
+	        }
+}
+
+    public static boolean letrasMinusculas(String senha){
+        String letrasMin = "abcdefghijklmnopqrstuvwxyz";
+        int quantidadeLetrasmin=0;
+        
+        for(int s=0; s < senha.length(); s++){
+                senha.charAt(s);
+            
+            for(int l=0; l < letrasMin.length(); l++){
+                
+                if (senha.charAt(s) == letrasMin.charAt(l))
+                    quantidadeLetrasmin++;
+            }
+        }
+        
+        if(quantidadeLetrasmin>0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    
+    public static boolean numeros(String senha){
+        String letrasMin = "0123456789";
+        int quantidadeNumeros=0;
+        
+        for(int s=0; s < senha.length(); s++){
+                senha.charAt(s);
+            
+            for(int l=0; l < letrasMin.length(); l++){
+                
+                if (senha.charAt(s) == letrasMin.charAt(l))
+                    quantidadeNumeros++;
+            }
+        }
+        
+        if(quantidadeNumeros>0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+
+    /* public static boolean caracterEspecial(String senha){
+        int quantidadecaracterEsp=0;
+        String carac= "!@#$%¨&*'()_-+=§´`}º[{ª~^]<,.>;:/?°";
+        
+        for(int s=0; s <= senha.length(); s++){
+                senha.charAt(s);
+                
+            for(int l=0; l <= carac.length(); l++){
+                //char aa = (char)i;
+                //carac.charAt(aa); 
+                    if (senha.charAt(s) == carac.charAt(l))
+                        quantidadecaracterEsp++;
+            }
+        }
+        
+        if(quantidadecaracterEsp>0){
+            return true;
+        } else {
+            return false;
+        }
+        
+    } */
+    
+}
+
+
