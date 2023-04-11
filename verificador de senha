@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main
 {
 	public static void main(String[] args) {
@@ -6,7 +9,7 @@ public class Main
 	
 		String senha;
 		
-		System.out.println("A senha deve conter: \n\n- Letra Maiuscula \n- Letra Minuscula \n- Numeral \n- No mínimo 7 caracteres \n");
+		System.out.println("A senha deve conter: \n\n- Letra Maiuscula \n- Letra Minuscula \n- Numeral \n- No mínimo 7 caracteres \n- Caracter Especial");
 		
 		
 		do{
@@ -15,7 +18,7 @@ public class Main
 		senha = teclado.nextLine();
 		System.out.print("\n");
 	
-		//caracterEspecial(senha);
+		verificaCaracteresEspeciais(senha);
 		if(senha.length() < 7){
 		    System.out.println("- Necessário 7 caracteres mínimos");
 		}
@@ -27,11 +30,11 @@ public class Main
 		    System.out.println("- Necessário ao menos uma letra Minuscula");
 		} if(numeros(senha)==false){
 		    System.out.println("- Necessário ao menos um numeral");
-		} /*if(caracterEspecial(senha)==false){
+		} if(verificaCaracteresEspeciais(senha)==false){
 		    System.out.println("Necessário ao menos um caracter especial");
-		} */
+		} 
 		
-		}while(letrasMaiusculas(senha)==false || letrasMinusculas(senha)==false || numeros(senha)==false && senha.length()<7 /*&& caracterEspecial ==true*/);
+		}while(letrasMaiusculas(senha)==false || letrasMinusculas(senha)==false || numeros(senha)==false && senha.length()<7 && verificaCaracteresEspeciais(senha)==true);
 		    System.out.print("------ SENHA CADASTRADA COM SUCESSO ------");
 		    
 		    
@@ -123,6 +126,14 @@ public class Main
         }
         
     } */
+    
+    public static boolean verificaCaracteresEspeciais(String senha) {
+        String regex = "[^a-zA-Z0-9]";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(senha);
+        return matcher.find();
+    
+    }
     
 }
 
